@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="JS/test.js"></script>
+        <title>Firewall proxy</title>
+    </head>
+    <body>
+        <div id="encabezado">
+            <div id="menu">
+                <button onclick="display(this)" value="1">Firewall</button>
+                <button onclick="display(this)" value="2">Inspección de estado</button>
+                <button onclick="display(this)" value="3">Proxy</button>
+                <button onclick="display(this)" value="4">UTM</button>
+            </div>
+        </div>
+        <div></div>
+        <div class="areaPrincipal">
+            <div id="datos">
+                <table height=20%>
+                    <tr class="heading">
+                        <td colspan="3">
+                            <h1>¿Que es?</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width=49%>
+                            Un firewall proxy es lo más cercano a una barrera física real que se puede conseguir. 
+                            A diferencia de otros tipos de firewall, este actúa como intermediario entre 
+                            redes externas y equipos, y evita el contacto directo entre ambos.
+                        </td>
+                        <td colspan="2">
+                            <p align=center><img src="img/proxy.png" height="60%" width="60%"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Los servidores proxy pueden brindar funcionalidad adicional, como seguridad y almacenamiento de 
+                            contenido en caché, evitando las conexiones directas desde el exterior de la red.
+                        </td>
+                        <td width=2%></td>
+                        <td>
+                            En este tipo de comunicación no existe una conexión directa entre el remitente y el 
+                            destinatario. En ocasiones, ni el sistema al que se le hacen las peticiones ni el 
+                            ordenador de destino saben que hay un proxy de por medio. 
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr class="heading">
+                        <td>
+                            <h1>Ventajas</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>
+                                    <b>Guardar Cache:</b> Permiten el uso del servidor proxy como servidor cache,
+                                    para despachar de forma más rápida ciertos tipos de contenidos en algunas redes donde están presentes
+                                </li>
+                                <br>
+                                <li>
+                                    <b>Registro de logs:</b> Un servidor proxy permite guardar en sus archivos de datos 
+                                    todos los logs sobre lo que sucede en el tráfico que maneja.
+                                </li>
+                                <br>
+                                <li>
+                                    <b>Filtración de sitios:</b> Es una de las características más usadas por los servidores proxy empresariales, 
+                                    sobre todo para evitar que los empleados de una institución ingresen a redes sociales o páginas con 
+                                    contenidos que pueda distraerlos de su trabajo diario. 
+                                </li>
+                                <br>
+                                <li>
+                                    <b>Bloqueo de direcciones IP:</b> Es posible bloquear tanto IPs internas de la red como IPs externas que accedan a ella.
+                                </li>
+                                <br>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
