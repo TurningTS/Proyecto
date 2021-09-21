@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/style.css">
+        <script src="test.js"></script>
+        <title>Firewall de inspección de estado</title>
+    </head>
+    <body>
+        <div id="encabezado">
+            <div id="menu">
+                <button onclick="display(this)" value="1">Firewall</button>
+                <button onclick="display(this)" value="2">Inspección de estado</button>
+                <button onclick="display(this)" value="3">Proxy</button>
+                <button onclick="display(this)" value="4">UTM</button>
+            </div>
+        </div>
+        <div></div>
+        <div class="areaPrincipal">
+            <div id="datos">
+                <table  height=20%>
+                    <tr class="heading">
+                        <td colspan="2">
+                            <h1>¿Que es?</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width=60%>
+                            Los Firewall de inspección de estado son una extensión de la tecnología de filtrado de paquetes. 
+                            El filtrado de paquetes basado en el estado de la conexión considera cada paquete de datos como 
+                            una unidad independiente y tiene en cuenta las relaciones históricas entre los paquetes anteriores 
+                            y de seguimiento. 
+                        </td>
+                        <td rowspan="2">
+                            <p align=center><img src="img/inspeccion.png" height="80%" width="80%"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            El establecimiento de todas las conexiones confiables (conexiones TCP) debe pasar por el proceso de 
+                            "reconocimiento de tres vías", a saber, "solicitud de sincronización del cliente", "respuesta del 
+                            servidor" y "respuesta del cliente", que significa cada paquete de datos. No es independiente, sino 
+                            que está estrechamente conectado entre sí.
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p>
+                                Los firewalls de inspección de estado utilizan todo tipo de tablas de sesión para abordar las sesiones 
+                                TCP activadas y las sesiones falsas UDP, la lista de control de acceso (ACL) decide qué sesiones deben 
+                                establecerse y los paquetes de datos se reenvían solo cuando coinciden con una entrada de sesión. 
+                            </p>
+                            <br>
+                            <p>
+                                Las sesiones falsas UDP son conexiones virtuales (UDP son protocolos sin conexión) 
+                                para la inspección de estado,y se establecen para el flujo de datos UP cuando 
+                                se procesan los paquetes UDP.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr class="heading">
+                        <td>
+                            <h1>Ventajas</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>
+                                    <b>Excelente procesamiento de los paquetes de datos de seguimiento:</b> cuando el firewall de inspección de estado 
+                                    realiza las comprobaciones de ACL, registra el estado de conexión del flujo de datos, por lo que los 
+                                    paquetes de seguimiento en este flujo de datos no necesitan de nuevo las comprobaciones de ACL y los 
+                                    firewalls reenvían los flujos de datos basados en la mesa de sesiones.
+                                </li>
+                                <br>
+                                <li>
+                                    <b>Alta seguridad:</b> La lista de estado de la conexión es dinámica. La entrada para los paquetes de respuesta temporal 
+                                    se cierra inmediatamente después de que se completa una sesión para proteger la seguridad de la intranet. 
+                                </li>
+                                <br>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
